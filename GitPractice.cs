@@ -15,8 +15,13 @@ This is to teach you guys how to use git, to have yall learn git better:
 {
     private int[] nums = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
 
-    void Start() {
-        Debug.Log(arraySplicer(5, nums));
+    void Main() {
+        String accume = "";
+        foreach (int item in nums){
+            accume += item + ", ";
+        }
+        
+        Console.Log(accume);
     }
 
         /**
@@ -30,8 +35,10 @@ This is to teach you guys how to use git, to have yall learn git better:
      */
     public T[] arraySplicer<T>(int index, T[] arrayToSplice) {
         T[] res = new T[arrayToSplice.Length];
+
         for (int i = index; i <= arrayToSplice.Length; i++) {
             res[i-index] = arrayToSplice[i];
+    
         }
         return res;
     }
