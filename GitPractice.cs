@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+
 
 /**
 This is to teach you guys how to use git, to have yall learn git better:
@@ -15,8 +15,12 @@ This is to teach you guys how to use git, to have yall learn git better:
 {
     private int[] nums = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
 
-    void Start() {
-        Debug.Log(arraySplicer(5, nums));
+    void main() {
+        string numString;
+        foreach(int i in arraySplicer(5, nums)){
+            numString += i;
+        }
+        Console.Log(numString);
     }
 
         /**
